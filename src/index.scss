@@ -1,0 +1,29 @@
+@import './assets/scss/reset';
+@import './assets/scss/mixin';
+@import './assets/scss/flex';
+@import './assets/scss/variables';
+
+
+.app-bg {
+   background: unquote($app-bg-color);
+   height: 100dvh;
+   color: #ffffff;
+}
+
+.white {
+   color: #ffffff !important;
+}
+
+.black {
+   color: #191919;
+}
+
+.position-absolute {
+  position: absolute;
+}
+.position-relative {
+  position: relative;
+}
+.position-fixed{
+  position: fixed;
+}

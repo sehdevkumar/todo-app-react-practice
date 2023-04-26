@@ -1,0 +1,48 @@
+@mixin customAliasClassesGenerator(
+  $attr,
+  $aliasName,
+  $start,
+  $step,
+  $end,
+  $suffix,
+  $isFont: false
+) {
+  @for $i from $step through $end {
+    .#{$aliasName}#{$i} {
+      @if $isFont == true {
+        #{$attr}: clamp(
+          #{($i - 1)}#{$suffix},
+          #{$i}#{$suffix},
+          #{($i + 1)}#{$suffix}
+        ) !important;
+      } @else {
+        #{$attr}:#{$i}#{$suffix}!important;
+      }
+    }
+  }
+}
+
+@include customAliasClassesGenerator('width', 'w-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('width', 'wp-', 1, 1, 100, '%');
+@include customAliasClassesGenerator('height', 'h-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('height', 'hp-', 1, 1, 100, '%');
+
+@include customAliasClassesGenerator('padding-left', 'pl-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('padding-top', 'pt-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('padding-right', 'pr-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('padding-bottom', 'pb-', 1, 1, 100, 'px');
+
+@include customAliasClassesGenerator('margin-left', 'pl-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('margin-top', 'pt-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('margin-right', 'pr-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('margin-bottom', 'pb-', 1, 1, 100, 'px');
+
+@include customAliasClassesGenerator(
+  'font-size',
+  'fs-',
+  1,
+  1,
+  100,
+  'px',
+  true
+);
