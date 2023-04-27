@@ -22,20 +22,33 @@
   }
 }
 
-@include customAliasClassesGenerator('width', 'w-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('width', 'w-', 1, 1, 1000, 'px');
 @include customAliasClassesGenerator('width', 'wp-', 1, 1, 100, '%');
-@include customAliasClassesGenerator('height', 'h-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('height', 'h-', 1, 1, 1000, 'px');
 @include customAliasClassesGenerator('height', 'hp-', 1, 1, 100, '%');
 
-@include customAliasClassesGenerator('padding-left', 'pl-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('padding-top', 'pt-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('padding-right', 'pr-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('padding-bottom', 'pb-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('padding-left', 'pl-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('padding-top', 'pt-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('padding-right', 'pr-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('padding-bottom', 'pb-', 1, 1, 1000, 'px');
 
-@include customAliasClassesGenerator('margin-left', 'pl-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('margin-top', 'pt-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('margin-right', 'pr-', 1, 1, 100, 'px');
-@include customAliasClassesGenerator('margin-bottom', 'pb-', 1, 1, 100, 'px');
+@include customAliasClassesGenerator('margin-left', 'ml-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('margin-top', 'mt-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('margin-right', 'mr-', 1, 1, 1000, 'px');
+@include customAliasClassesGenerator('margin-bottom', 'mb-', 1, 1, 1000, 'px');
+
+// Positions
+@include customAliasClassesGenerator('left', 'lx-', 0, 0, 1000, 'px');
+@include customAliasClassesGenerator('top', 'tx-', 0, 0, 1000, 'px');
+@include customAliasClassesGenerator('right', 'rx-', 0, 0, 1000, 'px');
+@include customAliasClassesGenerator('bottom', 'bx-', 0, 0, 1000, 'px');
+
+@include customAliasClassesGenerator('left', 'lp-', 0, 0, 100, '%');
+@include customAliasClassesGenerator('top', 'tp-', 0, 0, 100, '%');
+@include customAliasClassesGenerator('right', 'rp-', 0, 0, 100, '%');
+@include customAliasClassesGenerator('bottom', 'bp-', 0, 0, 100, '%');
+
+
 
 @include customAliasClassesGenerator(
   'font-size',
