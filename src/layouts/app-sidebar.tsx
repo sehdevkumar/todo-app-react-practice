@@ -1,6 +1,7 @@
 import { AppMenuItems } from '../shared/apps-config'
 import { InputOutputProps, MenuItem } from '../typings/app-common-typins'
 import './app-layout.scss';
+import {NavLink} from 'react-router-dom'
 
 
 export const AppSideBar = (props: InputOutputProps) => {
@@ -11,7 +12,11 @@ export const AppSideBar = (props: InputOutputProps) => {
       {menuItemList?.map((item) => {
         return (
           <ul key={item?.itemName}>
-            <li className='mt-10'>{item?.itemName}</li>
+            <li className='mt-10'>
+               <NavLink to={'home'}>
+                   {item?.itemName}
+               </NavLink>
+            </li>
           </ul>
         )
       })}
