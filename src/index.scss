@@ -27,3 +27,16 @@
 .position-fixed{
   position: fixed;
 }
+
+.text-center {
+  text-align: center !important;
+}
+
+.dis-nn {
+   display: none !important;
+}
+
+.no-prt {
+   pointer-events: none;
+   opacity: 0.5;
+}

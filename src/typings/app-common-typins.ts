@@ -5,6 +5,13 @@ export interface InputOutputProps {
 
 export interface MenuItem {
       itemName:string;
+      navigation:string;
       itemIcon:string;
       isItemActive:boolean;
+}
+
+export enum AppPathEnums {
+      Home='home',
+      Todo='todo',
+      History='history'
 }

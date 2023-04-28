@@ -1,36 +1,34 @@
-import './App.scss';
-import { AppHeader } from './layouts/app-header';
-import { AppSideBar } from './layouts/app-sidebar';
-import { MenuItem } from './typings/app-common-typins';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomeApp } from './components/home';
+import './App.scss'
+import { AppHeader } from './layouts/app-header'
+import { AppSideBar } from './layouts/app-sidebar'
+import { AppPathEnums, MenuItem } from './typings/app-common-typins'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HomeApp } from './components/home'
+import { AppTodo } from './components/todo'
+import { AppHistory } from './components/history'
 function App() {
-    
-  const onMenuItemsClicked = (item:MenuItem)=> {
-     console.log(item);
+  const onMenuItemsClicked = (item: MenuItem) => {
+    console.log(item)
   }
-     
-
 
   return (
-    
     <BrowserRouter>
-       <div className='app-bg'>
+      <div className="App app-bg">
+        <div className="sidebar">
+          <AppSideBar onOutput={onMenuItemsClicked} />
+        </div>
+        <div className="main-container">
           <AppHeader />
-           <AppSideBar onOutput={onMenuItemsClicked} />
-       </div>
-     <Routes>
-             
-    {/* <Route path='home' Component={HomeApp}/>
-    <Route path='side' Component={HomeApp}/> */}
-  
-
-     </Routes>
-
-
-  </BrowserRouter>
-
-  );
+          
+          <Routes>
+            <Route path={AppPathEnums.Home} element={<HomeApp />} />
+            <Route path={AppPathEnums.Todo}  element={<AppTodo />} />
+            <Route path={AppPathEnums.History}   element={<AppHistory />}/>
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
